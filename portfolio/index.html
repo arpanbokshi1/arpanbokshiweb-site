@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arpan | Creative Designer</title>
+    <meta name="description" content="Portfolio of Arpan — a creative designer specializing in branding, video editing, graphic design, and web development.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <span class="loader-text">ARPAN</span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">Arpan<span>.</span></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="menu-btn" id="menuBtn"><i data-lucide="menu"></i></button>
+    </nav>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-nav" id="closeNav"><i data-lucide="x"></i></button>
+        <ul>
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#services" class="mobile-link">Services</a></li>
+            <li><a href="#tools" class="mobile-link">Tools</a></li>
+            <li><a href="#process" class="mobile-link">Process</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section id="home" class="hero section">
+            <div class="hero-content">
+                <span class="badge"><i data-lucide="sparkles" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;"></i> Available for Freelance</span>
+                <h1 class="hero-title">
+                    I'm Arpan,<br>
+                    <span class="gradient-text">Creative</span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
+                </h1>
+                <p class="hero-subtitle">I blend aesthetics with strategy to craft compelling visual identities, engaging videos, and modern digital experiences that leave a lasting impression.</p>
+                <div class="hero-cta">
+                    <a href="#services" class="btn primary-btn">Explore My Work <i data-lucide="arrow-down-right" style="width:18px;height:18px;"></i></a>
+                    <a href="#contact" class="btn secondary-btn">Let's Talk <i data-lucide="message-circle" style="width:18px;height:18px;"></i></a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong class="counter" data-target="50">0</strong><span>+</span>
+                        <p>Design Projects</p>
+                    </div>
+                    <div class="hero-stat">
+                        <strong class="counter" data-target="30">0</strong><span>+</span>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="hero-stat">
+                        <strong class="counter" data-target="100">0</strong><span>%</span>
+                        <p>Dedication</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Sparkle Dots -->
+                <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+                <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+                <!-- 3D Cube - drag to rotate! -->
+                <div class="scene" id="cubeScene">
+                    <div class="cube" id="cube">
+                        <div class="cube-face cube-face-front"><i data-lucide="pen-tool" class="cube-icon"></i></div>
+                        <div class="cube-face cube-face-back"><i data-lucide="video" class="cube-icon"></i></div>
+                        <div class="cube-face cube-face-right"><i data-lucide="monitor" class="cube-icon"></i></div>
+                        <div class="cube-face cube-face-left"><i data-lucide="palette" class="cube-icon"></i></div>
+                        <div class="cube-face cube-face-top"><i data-lucide="layout" class="cube-icon"></i></div>
+                        <div class="cube-face cube-face-bottom"><i data-lucide="image" class="cube-icon"></i></div>
+                        <div class="cube-core"></div>
+                    </div>
+                </div>
+                <!-- Orbiting rings -->
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+            </div>
+        </section>
+
+        <!-- MARQUEE TICKER -->
+        <div class="marquee-wrapper hidden">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>VIDEO EDITING</span><span class="marquee-dot">✦</span>
+                    <span>BRANDING</span><span class="marquee-dot">✦</span>
+                    <span>GRAPHIC DESIGN</span><span class="marquee-dot">✦</span>
+                    <span>WEB DEVELOPING</span><span class="marquee-dot">✦</span>
+                    <span>CANVA EXPERT</span><span class="marquee-dot">✦</span>
+                    <span>UI/UX DESIGN</span><span class="marquee-dot">✦</span>
+                    <span>MOTION GRAPHICS</span><span class="marquee-dot">✦</span>
+                    <span>CREATIVE DIRECTION</span><span class="marquee-dot">✦</span>
+                    <!-- duplicate for seamless scroll -->
+                    <span>VIDEO EDITING</span><span class="marquee-dot">✦</span>
+                    <span>BRANDING</span><span class="marquee-dot">✦</span>
+                    <span>GRAPHIC DESIGN</span><span class="marquee-dot">✦</span>
+                    <span>WEB DEVELOPING</span><span class="marquee-dot">✦</span>
+                    <span>CANVA EXPERT</span><span class="marquee-dot">✦</span>
+                    <span>UI/UX DESIGN</span><span class="marquee-dot">✦</span>
+                    <span>MOTION GRAPHICS</span><span class="marquee-dot">✦</span>
+                    <span>CREATIVE DIRECTION</span><span class="marquee-dot">✦</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about" class="about section hidden">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text glass-panel" data-tilt data-tilt-max="3" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="about-label">Who I Am</div>
+                    <p>Hi, I'm <strong>Arpan</strong> — a passionate multi-disciplinary designer with a sharp eye for aesthetics and a relentless drive to craft visual stories that resonate. As a fresh creative talent stepping into the design world, I bring innovative ideas, a bold modern sensibility, and an unstoppable hunger to learn and grow.</p>
+                    <p>Whether it's building a brand from scratch, editing cinematic videos, or designing pixel-perfect interfaces, my mission is simple: <strong>turn imagination into reality</strong>.</p>
+                    <div class="skills">
+                        <span class="skill-tag">Video Editing</span>
+                        <span class="skill-tag">Branding</span>
+                        <span class="skill-tag">Graphic Design</span>
+                        <span class="skill-tag">Web Developing</span>
+                        <span class="skill-tag">Canva Expert</span>
+                        <span class="skill-tag">Motion Graphics</span>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card glass-panel" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="stat-icon"><i data-lucide="zap"></i></div>
+                        <h3>Fresh</h3>
+                        <p>Creative Energy</p>
+                    </div>
+                    <div class="stat-card glass-panel" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="stat-icon"><i data-lucide="target"></i></div>
+                        <h3>100%</h3>
+                        <p>Dedication</p>
+                    </div>
+                    <div class="stat-card glass-panel" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="stat-icon"><i data-lucide="heart"></i></div>
+                        <h3>Pixel</h3>
+                        <p>Perfect</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="services section hidden">
+            <h2 class="section-title">What I <span>Do</span></h2>
+            <p class="section-desc">I'm at the start of my creative journey, ready to bring these skills to your next project.</p>
+            <div class="service-grid">
+                <div class="service-card glass-panel" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="service-number">01</div>
+                    <div class="service-icon-wrapper"><i data-lucide="video" class="service-icon"></i></div>
+                    <h3>Video Editing</h3>
+                    <p>Crafting engaging, fast-paced, and visually stunning videos that capture attention, tell a powerful story, and keep audiences hooked.</p>
+                </div>
+                <div class="service-card glass-panel" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="service-number">02</div>
+                    <div class="service-icon-wrapper"><i data-lucide="palette" class="service-icon"></i></div>
+                    <h3>Branding & Design</h3>
+                    <p>Creating unique logos, cohesive brand identities, and eye-catching graphics that make your business stand out from the crowd.</p>
+                </div>
+                <div class="service-card glass-panel" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="service-number">03</div>
+                    <div class="service-icon-wrapper"><i data-lucide="code" class="service-icon"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Designing and building modern, responsive, and beautiful websites that provide a seamless, premium user experience.</p>
+                </div>
+                <div class="service-card glass-panel" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="service-number">04</div>
+                    <div class="service-icon-wrapper"><i data-lucide="image" class="service-icon"></i></div>
+                    <h3>Social Media Design</h3>
+                    <p>Designing scroll-stopping social media content, reels, thumbnails, and banners that boost engagement and grow your online presence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOOLS -->
+        <section id="tools" class="tools section hidden">
+            <h2 class="section-title">Tools I <span>Use</span></h2>
+            <div class="tools-grid">
+                <div class="tool-item glass-panel" data-tilt data-tilt-max="12">
+                    <div class="tool-emoji">🎨</div>
+                    <span>Canva</span>
+                </div>
+                <div class="tool-item glass-panel" data-tilt data-tilt-max="12">
+                    <div class="tool-emoji">🖌️</div>
+                    <span>Photoshop</span>
+                </div>
+                <div class="tool-item glass-panel" data-tilt data-tilt-max="12">
+                    <div class="tool-emoji">✏️</div>
+                    <span>Illustrator</span>
+                </div>
+                <div class="tool-item glass-panel" data-tilt data-tilt-max="12">
+                    <div class="tool-emoji">🎬</div>
+                    <span>Premiere Pro</span>
+                </div>
+                <div class="tool-item glass-panel" data-tilt data-tilt-max="12">
+                    <div class="tool-emoji">🎥</div>
+                    <span>After Effects</span>
+                </div>
+                <div class="tool-item glass-panel" data-tilt data-tilt-max="12">
+                    <div class="tool-emoji">📐</div>
+                    <span>Figma</span>
+                </div>
+                <div class="tool-item glass-panel" data-tilt data-tilt-max="12">
+                    <div class="tool-emoji">💻</div>
+                    <span>VS Code</span>
+                </div>
+                <div class="tool-item glass-panel" data-tilt data-tilt-max="12">
+                    <div class="tool-emoji">🌐</div>
+                    <span>Framer</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section id="process" class="process section hidden">
+            <h2 class="section-title">My <span>Process</span></h2>
+            <div class="process-timeline">
+                <div class="process-step glass-panel" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="step-number">01</div>
+                    <div class="step-icon"><i data-lucide="search"></i></div>
+                    <h3>Discover</h3>
+                    <p>Understanding your brand, goals, and audience through deep research and conversation.</p>
+                </div>
+                <div class="process-connector"><i data-lucide="chevron-right"></i></div>
+                <div class="process-step glass-panel" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="step-number">02</div>
+                    <div class="step-icon"><i data-lucide="pen-tool"></i></div>
+                    <h3>Design</h3>
+                    <p>Crafting beautiful, intentional designs and concepts that align with your vision.</p>
+                </div>
+                <div class="process-connector"><i data-lucide="chevron-right"></i></div>
+                <div class="process-step glass-panel" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="step-number">03</div>
+                    <div class="step-icon"><i data-lucide="code-2"></i></div>
+                    <h3>Develop</h3>
+                    <p>Building and refining the final product with precision, polish, and attention to detail.</p>
+                </div>
+                <div class="process-connector"><i data-lucide="chevron-right"></i></div>
+                <div class="process-step glass-panel" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="step-number">04</div>
+                    <div class="step-icon"><i data-lucide="rocket"></i></div>
+                    <h3>Deliver</h3>
+                    <p>Handing off a finished product you're proud to show the world.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact section hidden">
+            <h2 class="section-title">Let's <span>Connect</span></h2>
+            <p class="section-desc">Have a project in mind? Let's make something amazing together.</p>
+            <div class="contact-container glass-panel" data-tilt data-tilt-max="2" data-tilt-glare data-tilt-max-glare="0.1">
+                <div class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required placeholder="Tell me about your project, timeline, and budget..."></textarea>
+                    </div>
+                    <button type="button" id="sendBtn" class="btn primary-btn submit-btn">Send Message <i data-lucide="send" style="width:18px;height:18px;"></i></button>
+                </div>
+
+                <div id="successMsg" style="display:none; text-align:center; padding: 3rem 2rem;">
+                    <div class="success-icon-wrap"><i data-lucide="check-circle" style="width:60px;height:60px;color:#a855f7;"></i></div>
+                    <h3 style="margin:1rem 0 0.5rem; font-size:1.8rem;">Gmail Opened!</h3>
+                    <p style="color:var(--text-secondary); font-size:1.05rem;">Just hit Send in the Gmail tab. If it didn't open, <a href="#" id="retryLink" style="color:#a855f7; text-decoration:underline;">click here to try again</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">Arpan<span>.</span></div>
+                <p>Creative Designer & Visual Storyteller based in India. Let's build something extraordinary.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Socials</h4>
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                <a href="https://www.behance.net/" target="_blank">Behance</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Arpan. Crafted with passion.</p>
+            <div class="social-links">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="youtube"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop"><i data-lucide="arrow-up"></i></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
