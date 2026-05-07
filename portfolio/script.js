@@ -179,10 +179,11 @@ function drawParticles() {
 drawParticles();
 
 // === DRAGGABLE 3D CUBE ===
+// Main cube handling stays unchanged
 const cubeScene = document.getElementById('cubeScene');
 const cube = document.getElementById('cube');
-
 if (cubeScene && cube) {
+
     let isDragging = false;
     let currentRotation = { x: -20, y: -45 };
     let previousMousePosition = { x: 0, y: 0 };

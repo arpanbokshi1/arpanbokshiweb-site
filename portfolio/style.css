@@ -148,7 +148,8 @@ body {
 
 /* HERO VISUAL - 3D CUBE (cursor-controlled) */
 .hero-visual { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; height: 500px; }
-.scene { width: 220px; height: 220px; perspective: 800px; cursor: grab; }
+.scene, .extra-scene { width: 220px; height: 220px; perspective: 800px; cursor: grab; }
+.extra-scene { margin-left: 30px; }
 .scene:active { cursor: grabbing; }
 .cube {
     width: 100%; height: 100%; position: relative;
