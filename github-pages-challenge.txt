@@ -1,0 +1,2 @@
+Hostname: _github-pages-challenge-arpanbokshi1.arpanbokshiweb.site
+TXT value: bdb4fa8ac63b82375c8f3eda83a79c
